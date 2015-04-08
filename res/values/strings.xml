@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BullsAndCows</string>
+    <string name="newGame">New Game Digits</string>
+    <string name="newGameABC">New Game ABC</string>
+    <string name="rules">Rules</string>
+    <string name="tabelTurn">Turn</string>
+    <string name="tabelGuess">Guess</string>
+    <string name="tabelBulls">Bulls</string>
+    <string name="tabelCows">Cows</string>
+    <string name="rulesText">\tThe numerical version of the game is played with 4 digits. 
+        Computer generated a 4-digit secret number. 
+        The digits must be all different. Then, in turn, the players try 
+        to guess their opponent\'s number who gives the number of matches. 
+        If the matching digits are on their right positions, they are \"bulls\", 
+        if on different positions, they are \"cows\".
+         	\n\tExample:
+			\n\tSecret number: 4271
+			\n\tOpponent\'s try: 1234
+			\n\tAnswer: 1 bull and 2 cows. (The bull is \"2\", the cows are\"4\" and \"1\".)
+			\n\tThe word version of the game is exactly like the numerical version except 
+			instead of 4-digit numbers, 4-letter words are used.</string>
+    <string name="back">Back</string>
+
+</resources>

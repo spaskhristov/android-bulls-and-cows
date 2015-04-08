@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6DBFF"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.gmail.spaskhristov.bullsandcows.GameActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:ignore="UselessParent" 
+        android:descendantFocusability="beforeDescendants"
+    	android:focusableInTouchMode="true">
+
+        <NumberPicker
+            android:id="@+id/numPicker1"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content" />
+
+        <NumberPicker
+            android:id="@+id/numPicker2"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content" />
+
+        <NumberPicker
+            android:id="@+id/numPicker3"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content" />
+
+        <NumberPicker
+            android:id="@+id/numPicker4"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNewTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout"
+        android:background="@drawable/button_selector"
+        android:text="@android:string/ok"
+        android:textSize="24sp" />
+
+    <TableLayout
+        android:id="@+id/tableHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scrowViewResult"
+        android:layout_alignRight="@+id/scrowViewResult"
+        android:layout_below="@+id/btnNewTurn"
+        android:gravity="center"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/rowHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#787878"
+            android:columnWidth="200dp"
+            android:weightSum="1"
+            tools:ignore="UselessParent" >
+
+            <TextView
+                android:id="@+id/headCol1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tabelTurn"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/headCol2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tabelGuess"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/headCol3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tabelBulls"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/headCol4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tabelCows"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/scrowViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/btnNewTurn"
+        android:layout_alignRight="@+id/btnNewTurn"
+        android:layout_below="@+id/tableHead" >
+
+        <TableLayout
+            android:id="@+id/tableResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*" >
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
